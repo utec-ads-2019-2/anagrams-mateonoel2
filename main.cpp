@@ -27,7 +27,7 @@ int main(){
         ordered.push_back(palabra);
     }
 
-    for(int i=0; i<=ordered.size(); i++){
+    for(int i=0; i < ordered.size(); i++){
         temporary = ordered[i];
         ordered[i]="0";
             if((find(ordered.begin(), ordered.end(), temporary) != ordered.end())){
@@ -36,7 +36,7 @@ int main(){
         ordered[i]=temporary;
     }
 
-    for(int i=0; i<= desordered.size(); i++) {
+    for(int i=0; i < desordered.size(); i++) {
         if (!(find(not_pass.begin(), not_pass.end(), i) != not_pass.end())){
             print.push_back(desordered[i]);
         }
@@ -44,10 +44,8 @@ int main(){
 
     sort(print.begin(), print.end());
 
-    for(int i=0; i<= print.size(); i++){
-        if(!print[i].empty()){
-            cout<<print[i]<<'\n';
-        }
+    for(int i=0; i < print.size(); i++){
+        cout<<print[i]<<'\n';
     }
 
     return 0;
